@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D800069724E88D3D00F1D297 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = D800069624E88D3D00F1D297 /* Asset.swift */; };
+		D80006A024E88E2800F1D297 /* Kanji.swift in Sources */ = {isa = PBXBuildFile; fileRef = D800069F24E88E2800F1D297 /* Kanji.swift */; };
 		D8D0962524E6DC9C00E89670 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D0962424E6DC9C00E89670 /* AppDelegate.swift */; };
 		D8D0962724E6DC9C00E89670 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D0962624E6DC9C00E89670 /* SceneDelegate.swift */; };
-		D8D0962924E6DC9C00E89670 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D0962824E6DC9C00E89670 /* ViewController.swift */; };
 		D8D0962E24E6DC9D00E89670 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8D0962D24E6DC9D00E89670 /* Assets.xcassets */; };
 		D8D0963124E6DC9D00E89670 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8D0962F24E6DC9D00E89670 /* LaunchScreen.storyboard */; };
 		D8D0963C24E6DC9D00E89670 /* KanjiSRSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D0963B24E6DC9D00E89670 /* KanjiSRSTests.swift */; };
@@ -37,10 +38,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D800069624E88D3D00F1D297 /* Asset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
+		D800069F24E88E2800F1D297 /* Kanji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kanji.swift; sourceTree = "<group>"; };
 		D8D0962124E6DC9C00E89670 /* KanjiSRS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KanjiSRS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8D0962424E6DC9C00E89670 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8D0962624E6DC9C00E89670 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D8D0962824E6DC9C00E89670 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D8D0962D24E6DC9D00E89670 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D8D0963024E6DC9D00E89670 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D8D0963224E6DC9D00E89670 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -80,6 +82,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D800069524E88D1D00F1D297 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				D800069624E88D3D00F1D297 /* Asset.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		D800069C24E88DF800F1D297 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D800069F24E88E2800F1D297 /* Kanji.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		D86FA7BC24E6E6F0009F73ED /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -113,10 +131,11 @@
 		D8D0962324E6DC9C00E89670 /* KanjiSRS */ = {
 			isa = PBXGroup;
 			children = (
+				D800069C24E88DF800F1D297 /* Models */,
+				D800069524E88D1D00F1D297 /* Enums */,
 				D8D0965424E6E0E900E89670 /* Controllers */,
 				D8D0962424E6DC9C00E89670 /* AppDelegate.swift */,
 				D8D0962624E6DC9C00E89670 /* SceneDelegate.swift */,
-				D8D0962824E6DC9C00E89670 /* ViewController.swift */,
 				D8D0962D24E6DC9D00E89670 /* Assets.xcassets */,
 				D8D0962F24E6DC9D00E89670 /* LaunchScreen.storyboard */,
 				D8D0963224E6DC9D00E89670 /* Info.plist */,
@@ -280,8 +299,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8D0962924E6DC9C00E89670 /* ViewController.swift in Sources */,
+				D800069724E88D3D00F1D297 /* Asset.swift in Sources */,
 				D8D0962524E6DC9C00E89670 /* AppDelegate.swift in Sources */,
+				D80006A024E88E2800F1D297 /* Kanji.swift in Sources */,
 				D8D0965624E6E0FA00E89670 /* SearchViewController.swift in Sources */,
 				D8D0962724E6DC9C00E89670 /* SceneDelegate.swift in Sources */,
 				D8D0965A24E6E15200E89670 /* StudyListViewController.swift in Sources */,
