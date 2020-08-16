@@ -18,7 +18,7 @@ struct Kanji: Codable {
     var kunyomi: String
     var onyomiKatakana: String
     var onyomi: String
-    var examples: String
+    var examples: [[String]]
     var radical: String
     var radicalOrder: Double
     var radicalStrokes: Int
