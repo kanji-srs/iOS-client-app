@@ -11,17 +11,17 @@ import Foundation
 struct Kanji: Codable {
     var kanji: String
     var kanjiName: String
-    var kanjiStrokeCount: String
+    var kanjiStrokeCount: Int
     var kanjiMeaning: String
-    var kanjiGrade: String
+    var kanjiGrade: Int?
     var kunyomiHiragana: String
     var kunyomi: String
     var onyomiKatakana: String
     var onyomi: String
     var examples: String
     var radical: String
-    var radicalOrder: String
-    var radicalStrokes: String
+    var radicalOrder: Double
+    var radicalStrokes: Int
     var radicalNameHiragana: String
     var radicalName: String
     var radicalMeaning: String

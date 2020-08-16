@@ -28,6 +28,7 @@ class KanjiListViewController: UIViewController {
             print(kanjiList.count)
         }
         catch {
+            print(error)
             fatalError("Unable to parse kanji list from JSON")
         }
     }
