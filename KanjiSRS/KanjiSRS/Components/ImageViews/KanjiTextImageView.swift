@@ -30,7 +30,7 @@ class KanjiTextImageView: UIImageView {
     }
     
     func generateUIImageFromString(for kanjiCharacter: String) {
-        self.image = kanjiCharacter.image(withAttributes: nil)
+        self.image = kanjiCharacter.image(withAttributes: [.foregroundColor: UIColor.systemIndigo, .font: UIFont.systemFont(ofSize: 80.0)])
     }
 
 }
