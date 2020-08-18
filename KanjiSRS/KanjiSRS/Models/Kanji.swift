@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Kanji: Codable {
+struct Kanji: Codable, Hashable {
     var kanji: String
     var kanjiName: String
     var kanjiStrokeCount: Int
