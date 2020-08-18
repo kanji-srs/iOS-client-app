@@ -31,14 +31,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func createKanjiListNavigationController() -> UINavigationController {
         let kanjiListViewController = KanjiListViewController()
         kanjiListViewController.title = "Kanji"
-        kanjiListViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .featured, tag: 1)
+        kanjiListViewController.tabBarItem = UITabBarItem(title: "Kanji", image: UIImage(systemName: "book"), tag: 1)
         return UINavigationController(rootViewController: kanjiListViewController)
     }
     
     func createStudyListNavigationController() -> UINavigationController {
         let studyListViewController = StudyListViewController()
         studyListViewController.title = "Study"
-        studyListViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 2)
+        studyListViewController.tabBarItem = UITabBarItem(title: "Study", image: UIImage(systemName: "checkmark"), tag: 2)
         return UINavigationController(rootViewController: studyListViewController)
     }
     
