@@ -9,11 +9,11 @@
 import Foundation
 
 struct Kanji: Codable, Hashable {
-    var kanji: String
-    var kanjiName: String
-    var kanjiStrokeCount: Int
-    var kanjiMeaning: String
-    var kanjiGrade: Int?
+    var character: String
+    var name: String
+    var strokeCount: Int
+    var meaning: String
+    var grade: Int?
     var kunyomiHiragana: String
     var kunyomi: String
     var onyomiKatakana: String

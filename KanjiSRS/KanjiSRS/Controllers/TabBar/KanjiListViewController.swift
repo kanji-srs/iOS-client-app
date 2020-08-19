@@ -23,17 +23,20 @@ class KanjiListViewController: UIViewController, UICollectionViewDelegate {
         view.backgroundColor = .systemBackground
         configureCollectionView()
         configureUICollectionViewDataSource()
-        readKanjiListDataAsset()
+        kanjiList = readKanjiListDataAsset()
+        kanjiList.sort { (this, other) -> Bool in
+            return this.strokeCount < other.strokeCount
+        }
+        updateData(with: kanjiList)
     }
     
-    func readKanjiListDataAsset() {
+    func readKanjiListDataAsset() -> [Kanji] {
         guard let asset = NSDataAsset(name: Asset.KanjiData.rawValue) else {
             fatalError("Missing data asset: \(Asset.KanjiData.rawValue)")
         }
         do {
             let decoder = JSONDecoder()
-            kanjiList = try decoder.decode([Kanji].self, from: asset.data)
-            self.updateData(with: self.kanjiList)
+            return try decoder.decode([Kanji].self, from: asset.data)
         }
         catch {
             fatalError("Unable to parse kanji list from JSON: \(error.localizedDescription)")
@@ -45,12 +48,12 @@ class KanjiListViewController: UIViewController, UICollectionViewDelegate {
         view.addSubview(collectionView)
         collectionView.delegate = self
         collectionView.backgroundColor = .systemBackground
-        collectionView.register(KanjiCell.self, forCellWithReuseIdentifier: KanjiCell.reuseID)
+        collectionView.register(KanjiCell.self, forCellWithReuseIdentifier: KanjiCell.Configuration.reuseID.rawValue)
     }
     
     func configureUICollectionViewDataSource() {
         dataSource = UICollectionViewDiffableDataSource<Section, Kanji>(collectionView: collectionView, cellProvider: { (collectionView, indexPath, kanji) -> UICollectionViewCell? in
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: KanjiCell.reuseID, for: indexPath) as! KanjiCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: KanjiCell.Configuration.reuseID.rawValue, for: indexPath) as! KanjiCell
             cell.mapKanjiData(for: kanji)
             return cell
         })

@@ -10,7 +10,10 @@ import UIKit
 
 class KanjiCell: UICollectionViewCell {
     
-    static let reuseID = "KanjiCell"
+    enum Configuration: String {
+        case reuseID = "KanjiCell"
+    }
+    
     let defaultPadding: CGFloat = 8
     let kanjiImageView = KanjiTextImageView(frame: .zero)
     let kanjiLabel = KanjiTitleLabel(textAlignment: .center, fontSize: 16)
@@ -25,8 +28,8 @@ class KanjiCell: UICollectionViewCell {
     }
     
     func mapKanjiData(for kanji: Kanji) {
-        kanjiLabel.text = kanji.kanjiName
-        kanjiImageView.generateUIImageFromString(for: kanji.kanji)
+        kanjiLabel.text = kanji.name
+        kanjiImageView.generateUIImageFromString(for: kanji.character)
     }
     
     func configure() {
